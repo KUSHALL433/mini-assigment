@@ -1,0 +1,9 @@
+Transcript,Summary,Sentiment
+"Customer: Hi, I ordered a laptop two weeks ago, but I haven’t received any update on shipping. Can you please check the status?
+Support Agent: You’ll have to wait. We’re dealing with a lot of orders right now.
+Customer: I understand, but can you at least tell me if it has been shipped? I need it for work.
+Support Agent: Like I said, we’re busy. It will come when it comes.
+Customer: That’s not helpful. Can I speak to a manager?
+Support Agent: The manager will tell you the same thing. Do you want to wait or not?
+Customer: This is very frustrating. I just need information.
+Support Agent: Well, if you’re not happy, you can cancel the order. Anything else?","A customer inquired about the status of their laptop order, which had been placed two weeks prior. The support agent was unhelpful, offering generic excuses and ultimately suggesting the customer cancel the order. The customer was frustrated and sought to speak to a manager.",Negative
