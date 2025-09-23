@@ -37,6 +37,15 @@ if st.button("Submit"):
         data = {'Transcript':fi,'Summary':summary,'Sentiment':sentiment}
         df=pd.DataFrame(data,index=[0])
         df.to_csv('call_analysis.csv',index=False)
+        csv = df.to_csv(index=False).encode("utf-8")
+
+        st.download_button(
+          label="📥 Download Analysis as CSV",
+          data=csv,
+          file_name="call_analysis.csv",
+          mime="text/csv",
+          )
     else:
         st.error("Please Upload a transcript file as input")
+
 
