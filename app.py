@@ -16,7 +16,7 @@ prompt1 = PromptTemplate(template="You are given {text} as an input summarize th
 
 parser = StrOutputParser()
 
-st.title("Internshala Internship Mini Assignment:Customer call transcript sentiment analyzer using Groq.")
+st.title("Customer Call transcript sentiment analyzer.")
 
 transcript = st.file_uploader("Upload a text file containing transcript",type='txt')
 
@@ -47,5 +47,6 @@ if st.button("Submit"):
           )
     else:
         st.error("Please Upload a transcript file as input")
+
 
 
