@@ -8,6 +8,11 @@ import pandas as pd
 
 load_dotenv()
 
+st.set_page_config(
+    page_title="Call Transcript Analysis",
+    page_icon="☎️",
+)
+
 model = ChatGroq(model="llama-3.1-8b-instant")
 
 prompt = PromptTemplate(template="You are a bot that performs sentiment analysis on a transcript conversation with {text} and classify the entire conversation in  ONLY one word as positive,negative or neutral based on the sentiments it has. Return Ouput as ONLY ONE WORD",input_variables=['text'])
@@ -16,7 +21,7 @@ prompt1 = PromptTemplate(template="You are given {text} as an input summarize th
 
 parser = StrOutputParser()
 
-st.title("Customer Call transcript sentiment analyzer.")
+st.title("Call transcript summary generator and sentiment analyzer.",anchor=False)
 
 transcript = st.file_uploader("Upload a text file containing transcript",type='txt')
 
@@ -47,6 +52,7 @@ if st.button("Submit"):
           )
     else:
         st.error("Please Upload a transcript file as input")
+
 
 
 
