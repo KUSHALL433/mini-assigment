@@ -15,9 +15,33 @@ st.set_page_config(
 
 model = ChatGroq(model="llama-3.1-8b-instant")
 
-prompt = PromptTemplate(template="You are a bot that performs sentiment analysis on a transcript conversation with {text} and classify the entire conversation in  ONLY one word as positive,negative or neutral based on the sentiments it has. Return Ouput as ONLY ONE WORD",input_variables=['text'])
+# Previous prompts didn't worked well 
 
-prompt1 = PromptTemplate(template="You are given {text} as an input summarize the entire conversation in 2-3 lines ONLY. Return output ONLY 2-3 lines")
+# prompt = PromptTemplate(template="You are a bot that performs sentiment analysis on a transcript conversation with {text} and classify the entire conversation in  ONLY one word as positive,negative or neutral based on the sentiments it has. Return Ouput as ONLY ONE WORD",input_variables=['text'])
+
+# prompt1 = PromptTemplate(template="You are given {text} as an input summarize the entire conversation in 2-3 lines ONLY. Return output ONLY 2-3 lines")
+
+# NEW PROMPTS
+prompt = PromptTemplate(template="""You are a bot that performs sentiment analysis on a transcript conversation.
+                        If the given text:
+                        -------------
+                        {text} 
+                        -------------
+                        has transcript converation then classify the entire conversation in ONLY one word as positive,negative or neutral based on the sentiments. Return as output only ONE WORD. 
+                        If the context is not related to call transcript then output provide as ouput I DON'T KNOW.""",
+                        input_variables=['text']
+                        )
+
+prompt1 = PromptTemplate(template="""You are a bot that performs sentiment analysis on a transcript conversation.
+                        And you are given below text as input:
+                        ------------
+                        {text} 
+                        ------------
+                        If the given text is related to a call transcript then summarize the entire conversation in 2-3 lines ONLY.
+                         
+                        Return as output ONLY 2-3 lines be concise and return no other explanation.
+                         
+                        If the text is not related to a call transcript then output only I DON'T KNOW.""",input_variables=['text'])
 
 parser = StrOutputParser()
 
@@ -52,6 +76,7 @@ if st.button("Submit"):
           )
     else:
         st.error("Please Upload a transcript file as input")
+
 
 
 
