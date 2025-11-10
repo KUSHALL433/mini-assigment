@@ -1,6 +1,9 @@
 # Transcript Summarizer and Sentiment Analysis.
 Langchain and Groq based call transcript sentiment analyzer. This model takes as input a text file containing call transcripts and provides as output a .csv file containing call summary, sentiment as well as original content.<br>
 <br>
+DO STAR THIS REPO IF YOU LIKE THIS PROJECT.
+<br>
+<br>
 # Sample Transcript 1 
 Customer: Hi, I ordered a laptop two weeks ago, but I haven’t received any update on shipping. Can you please check the status?<br>
 Support Agent: You’ll have to wait. We’re dealing with a lot of orders right now.<br>
