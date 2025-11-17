@@ -4,6 +4,15 @@ Langchain and Groq based call transcript sentiment analyzer. This model takes as
 DO STAR THIS REPO IF YOU LIKE THIS PROJECT.
 <br>
 <br>
+[Access The app here](https://newminiassignment.streamlit.app/)
+<br>
+<br>
+UI Preview 
+<br>
+<br>
+<img width="1919" height="908" alt="Screenshot 2025-11-17 182009" src="https://github.com/user-attachments/assets/450739fb-c8e5-4207-bf51-f706685542de" />
+<br>
+<br>
 # Sample Transcript 1 
 Customer: Hi, I ordered a laptop two weeks ago, but I haven’t received any update on shipping. Can you please check the status?<br>
 Support Agent: You’ll have to wait. We’re dealing with a lot of orders right now.<br>
